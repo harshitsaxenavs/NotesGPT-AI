@@ -5,6 +5,8 @@ NotesGPT-AI is a **Streamlit-based AI chatbot** that allows you to upload PDF do
 
 This app is optimized for **speed, UX, and usability**, featuring progress bars, status messages, and expandable answers.  
 
+**Enjoy smarter PDF notes exploration with NotesGPT-AI!**
+
 ---
 
 ## Features
@@ -81,11 +83,6 @@ streamlit run app.py
 
 ---
 
-## License
-
-This project is open-source under the **MIT License**.  
-
----
 
 ## Future Improvements
 
@@ -97,4 +94,11 @@ This project is open-source under the **MIT License**.
 
 ---
 
-**Enjoy smarter PDF notes exploration with NotesGPT-AI!**
+## License
+
+MIT License
+Copyright (c) 2025 Harshit Saxena
+
+---
+
+
