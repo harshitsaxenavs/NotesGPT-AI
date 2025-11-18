@@ -35,7 +35,8 @@ cd NotesGPT-AI
 2. Install dependencies:
 
 ```bash
-pip install -r requirements.txt
+pip install streamlit requests PyPDF2 langchain langchain-community faiss-cpu sentence-transformers
+
 ```
 
 3. Run the app:
