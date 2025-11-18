@@ -8,6 +8,11 @@ This app is optimized for **speed, usability, and user experience**, featuring c
 **Explore your notes smarter with NotesGPT-AI!**
 
 ---
+## 🟢 Live Demo
+
+🔗 **Try it Live:** [Streamlit App](https://notesgpt-ai.streamlit.app/)  
+
+---
 
 ## Features
 
