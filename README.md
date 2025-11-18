@@ -1,25 +1,27 @@
 
 # NotesGPT-AI
 
-NotesGPT-AI is a **Streamlit-based AI chatbot** that allows you to upload PDF documents and ask questions about their content. It uses **LangChain**, **HuggingFace embeddings**, and **FAISS** for semantic search, and connects to the **OpenRouter API** for AI-powered answers.  
+**NotesGPT-AI** is a **Streamlit-based AI assistant** that allows you to upload PDF documents and ask questions about their content. It uses **LangChain**, **HuggingFace embeddings**, and **FAISS** for semantic search, and connects to the **OpenRouter API** for AI-powered answers.
 
-This app is optimized for **speed, UX, and usability**, featuring progress bars, status messages, and expandable answers.  
+This app is optimized for **speed, usability, and user experience**, featuring caching, dynamic relevance filtering, progress spinners, and expandable AI responses.  
 
-**Enjoy smarter PDF notes exploration with NotesGPT-AI!**
+**Explore your notes smarter with NotesGPT-AI!**
 
 ---
 
 ## Features
 
 - **PDF Upload & Processing**: Upload PDFs and extract text efficiently.  
-- **Progress Feedback**: Real-time progress bar while processing PDF pages.  
-- **Chunking & Embeddings**: Splits PDF into chunks for meaningful context and creates embeddings using HuggingFace models.  
-- **Vector Search**: Fast semantic search using FAISS.  
-- **Customizable Models**: Choose from different embedding models and LLMs.  
-- **Interactive Queries**: Ask questions via a clean interface with a button-triggered query.  
-- **Expandable Answers**: AI responses appear in an expandable section.  
-- **Download Answers**: Easily download the AI-generated answer as a TXT file.  
-- **Sidebar Info**: View PDF stats (filename, size, pages) and manage model selections.  
+- **Progress Feedback**: Real-time progress spinner during PDF processing and embedding creation.  
+- **Chunking & Embeddings**: Splits PDF into meaningful chunks and creates embeddings using HuggingFace models.  
+- **Vector Search**: Fast semantic search with FAISS.  
+- **Dynamic Similarity Threshold**: Adjust relevance threshold with a slider to filter search results.  
+- **Customizable Models**: Choose from multiple embedding models and LLMs.  
+- **Interactive Queries**: Ask questions through a clean input interface.  
+- **Expandable Answers**: AI responses appear in an expandable section for readability.  
+- **Download Answers**: Save AI-generated answers as TXT files.  
+- **Sidebar Info**: Displays PDF filename, size, number of pages, and model selections.  
+- **Caching**: Embeddings are cached to speed up repeated queries.  
 
 ---
 
@@ -36,7 +38,6 @@ cd NotesGPT-AI
 
 ```bash
 pip install streamlit requests PyPDF2 langchain langchain-community faiss-cpu sentence-transformers
-
 ```
 
 3. Run the app:
@@ -52,10 +53,12 @@ streamlit run app.py
 1. **Upload PDF**: Use the sidebar to upload your PDF file.  
 2. **View PDF info**: File name, size, and number of pages are displayed in the sidebar.  
 3. **Select Models**: Choose the embedding model and AI model for query processing.  
-4. **Enter API Key**: Provide your OpenRouter API key.  
-5. **Ask a Question**: Type your query and click the **Ask** button.  
-6. **View Answer**: The AI response appears in an expandable section.  
-7. **Download Answer**: Click the download button to save the answer.  
+4. **Enter API Key**: Provide your OpenRouter API key for the selected model.  
+5. **Set Relevance Threshold**: Use the slider to adjust the similarity threshold for filtering context.  
+6. **Ask a Question**: Type your query and click the **Ask** button.  
+7. **View Answer**: AI response appears in an expandable section.  
+8. **Download Answer**: Click the download button to save the response as TXT.  
+9. **Out-of-context Handling**: If your question is unrelated to the uploaded PDF, the app will display a **generic message**.  
 
 ---
 
@@ -63,7 +66,7 @@ streamlit run app.py
 
 - `sentence-transformers/all-MiniLM-L6-v2` – Fast, lightweight  
 - `sentence-transformers/all-mpnet-base-v2` – Higher quality, slightly slower  
-- `sentence-transformers/paraphrase-MiniLM-L3-v2` – Small & fast for simple queries  
+- `sentence-transformers/paraphrase-MiniLM-L3-v2` – Small and fast  
 
 ---
 
@@ -76,30 +79,25 @@ streamlit run app.py
 
 ## UI/UX Improvements
 
-- Progress bar during PDF processing for real-time feedback.  
-- Dynamic status messages for extraction, chunking, and embedding creation.  
-- Expandable answer section for readability.  
-- Sidebar with clear sections for PDF info, embeddings, and model selection.  
-- Button-triggered queries to avoid unnecessary API calls.  
+- Spinner during PDF processing, chunking, and embedding creation.  
+- Dynamic status messages for user feedback.  
+- Expandable answer section for cleaner readability.  
+- Sidebar with clear sections for PDF stats, embedding selection, and model selection.  
+- Query button triggers API calls only when needed.  
 
 ---
 
-
 ## Future Improvements
 
-- Multi-file upload and combined search.  
-- Caching embeddings for faster repeated processing.  
+- Multi-file upload and combined semantic search.  
+- Highlighting relevant text in the PDF based on the AI answer.  
 - Offline embeddings to avoid API calls.  
-- Semantic highlighting of answers in the PDF.  
-- Storing API key in session state for convenience.  
+- Persistent API keys using session state.  
+- Additional model support for more accurate answers.  
 
 ---
 
 ## License
 
-MIT License
+MIT License  
 Copyright (c) 2025 Harshit Saxena
-
----
-
-
