@@ -73,7 +73,7 @@ streamlit run app.py
 ## Recommended AI Models
 
 - `gpt-oss-20b` – Free-quality GPT OSS model  
-- `google/gemini-2.0-flash-exp:free` – Google Gemini 2.0 Flash  
+- `google/gemini-2.0-flash-exp:free` – Google Gemini 2.0 Flash (Not Stable)
 
 ---
 
