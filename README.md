@@ -1,7 +1,7 @@
 
-# NotesGPT-AI
+# NotesGPT-AI Q&A Assistant
 
-**NotesGPT-AI** is a **Streamlit-based AI assistant** that allows you to upload PDF documents and ask questions about their content. It uses **LangChain**, **HuggingFace embeddings**, and **FAISS** for semantic search, and connects to the **OpenRouter API** for AI-powered answers.
+**NotesGPT-AI Q&A Assistant** is a **Streamlit-based AI assistant** that allows you to upload PDF documents and ask questions about their content. It uses **LangChain**, **HuggingFace embeddings**, and **FAISS** for semantic search, and connects to the **OpenRouter API** for AI-powered answers.
 
 This app is optimized for **speed, usability, and user experience**, featuring caching, dynamic relevance filtering, progress spinners, and expandable AI responses.  
 
